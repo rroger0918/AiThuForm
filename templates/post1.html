@@ -1,0 +1,100 @@
+<!DOCTYPE html> {% load static %}
+<html>
+
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+
+    <title>昂哥研習營</title>
+    <style>
+        /* body {
+            overflow-y: hidden;
+            overflow-x: hidden;
+        } */
+    </style>
+
+
+</head>
+
+
+<body>
+    <div class="container">
+
+        <div class="row align-items-center">
+            <h1>昂哥研習營報名表</h1>
+
+            <div>
+                <form action="." method="POST" name="form1">
+                    {% csrf_token %}
+                    <table class="table table-dark">
+                        <tr>
+                            <th scope="row">姓名</th>
+                            <td><input type="text" id="cName" name="cName" required="required" /></td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">人數</th>
+                            <td><input type="number" id="cPhone" name="cPhone" placeholder="含自己" required="required" min="1" max="10" step="1" /></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">餐點</th>
+                            <td><textarea id="cAddr" name="cAddr" rows="10" cols="30" required="required" placeholder="可填尚未確定"></textarea></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <input type="submit" name="button" id="button" value="送出" onclick="return(alert('報名成功!'))">
+                            </th>
+                        </tr>
+                    </table>
+
+                </form>
+            </div>
+        </div>
+
+
+
+    </div>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12 col-md-8 ">
+
+                <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_6kbjigp3.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript " src="{% static 'js/scripts.js' %} "></script>
+    </script>
+
+    <!-- Optional JavaScript -->
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+</body>
+
+
+</html>
