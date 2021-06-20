@@ -17,14 +17,14 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url       
 from WIN import views 
-from WIN.views import home
+from WIN.views import home, post1
 
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'^$',home),
-    url(r'^index/$',home),
+    url(r'^$',post1),
+    url(r'^index/$',post1),
     url(r'^post1/$',views.post1),
     
 ]

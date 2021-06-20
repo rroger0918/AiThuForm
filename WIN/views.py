@@ -17,7 +17,7 @@ def post1(request):  #新增資料，資料不作驗證
 		#新增一筆記錄
 		unit = student.objects.create(cName=cName,  cPhone=cPhone, cAddr=cAddr) 
 		unit.save()  #寫入資料庫
-		return redirect('/index/')	
+		return redirect('https://authu.herokuapp.com')	
 	else:
 		message = '請輸入資料'
 	return render(request, "post1.html", locals())	
