@@ -10,8 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
-from pathlib import Path
-from django.conf import settings
+
+
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -122,7 +122,7 @@ USE_TZ = True
 
 #STATIC_ROOT = (os.path.join(SITE_ROOT, 'static_files/'))
 
-SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
-STATICFILES_DIRS = (
-  os.path.join(SITE_ROOT, 'static/'),
-)
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
