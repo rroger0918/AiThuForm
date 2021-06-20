@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url       
 from WIN import views 
-from WIN.views import home, post1
+from WIN.views import  post1
 
 
 
